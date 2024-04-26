@@ -1,11 +1,13 @@
 import adapter from '@sveltejs/adapter-auto'
-import { vitePreprocess } from '@sveltejs/vite-plugin-svelte'
+import preprocess from 'svelte-preprocess'
 
 /** @type {import('@sveltejs/kit').Config} */
-const config = {
+export default {
     // Consult https://kit.svelte.dev/docs/integrations#preprocessors
     // for more information about preprocessors
-    preprocess: vitePreprocess(),
+    preprocess: preprocess({
+        scss: { prependData: `@import './static/index.scss';` }
+    }),
 
     kit: {
         // adapter-auto only supports some environments, see https://kit.svelte.dev/docs/adapter-auto for a list.
@@ -16,7 +18,10 @@ const config = {
         alias: {
             'components/*': 'src/components/*'
         }
+    },
+
+    onwarn: (warning, handler) => {
+        if (warning.code === 'css-unused-selector') return
+        handler(warning)
     }
 }
-
-export default config
