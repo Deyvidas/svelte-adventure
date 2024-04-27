@@ -4,7 +4,7 @@
     "trailingComma": "none",
     "printWidth": 79,
     "tabWidth": 4,
-    "semi": false,
+    "semi": true,
     "arrowParens": "avoid",
 
     "overrides": [

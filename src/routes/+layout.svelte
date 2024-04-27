@@ -1,6 +1,6 @@
 <script type="ts">
-    import Container from 'components/Container.svelte'
-    import '../app.scss'
+    import Container from 'components/Container.svelte';
+    import '../app.scss';
 </script>
 
 <Container>

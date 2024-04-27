@@ -1,6 +1,6 @@
 <script lang="ts">
-    let cls: 'container' | 'container-right' | 'container-left' = 'container'
-    export { cls as class }
+    let cls: 'container' | 'container-right' | 'container-left' = 'container';
+    export { cls as class };
 </script>
 
 <div class={cls}>
