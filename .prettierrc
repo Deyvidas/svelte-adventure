@@ -1,7 +1,7 @@
 {
     "useTabs": false,
     "singleQuote": true,
-    "trailingComma": "none",
+    "trailingComma": "all",
     "printWidth": 79,
     "tabWidth": 4,
     "semi": true,
@@ -24,6 +24,7 @@
     "importOrderSeparation": true,
     "importOrder": ["<THIRD_PARTY_MODULES>", "^components"],
 
-    "svelteBracketNewLine": false,
-    "svelteIndentScriptAndStyle": true
+    "svelteBracketNewLine": true,
+    "svelteIndentScriptAndStyle": true,
+    "singleAttributePerLine": true
 }
